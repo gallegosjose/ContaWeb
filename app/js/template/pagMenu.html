@@ -1,0 +1,366 @@
+<script>
+    $(document).ready(function() {
+        $('input#idUsuario, textarea#textarea1').characterCounter();
+    });
+
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+    $(document).ready(function(){
+        $('ul.tabs').tabs();
+    });
+    $(document).ready(function(){
+
+        $('.ir-arriba').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > 0 ){
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+    });
+</script>
+<script>
+
+    // SIDEBAR
+    $(document).ready(function(){
+
+        $('.button-collapse').sideNav({
+                menuWidth: 420, // Default is 300
+                edge: 'left', // Choose the horizontal origin
+
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true // Choose whether you can drag to open on touch screens
+            }
+        );
+        // START OPEN
+        $('.button-collapse').sideNav('show');
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $('.materialboxed').materialbox();
+    });
+</script>
+
+<div class="container">
+    <span>
+        <i class=" waves-effect ir-arriba material-icons prefix">arrow_upward</i>
+    </span>
+    <div class="nav-wrapper">
+        <a data-activates="slide-out"  class="waves-effect waves-light btn button-collapse"><i class="material-icons left">menu</i>MENU</a>
+    </div>
+    <div ng-show="inicio == 1" >
+        <div class="container" >
+            <div class="row"></div>
+            <div class="row"></div>
+        <div class="col s4">
+            <div class="center-align">
+                <h4><b><u>ANÁLISIS DE LA EMPRESA UNIÓN DE CERVECERÍAS PERUANAS BACKUS JOHNSTON </u></b></h4><div class="row"></div><div class="row"></div><div class="row"></div>
+                <img  class="materialboxed fotoLogoBackus"  src="app/img/logo_backus_2.jpg" alt="HTML5 Icon"  style="width:650px;height:300px;">
+            </div>
+        </div>
+        </div>
+    </div>
+    <div ng-show="integrantes==1">
+        <div class="card">
+            <div class="card-content black-text">
+                <div class="row">
+                    <div class="col s2"></div>
+                    <div class="col s8">
+                        <div class=" row center-align">
+                            <h4><b>INTEGRANTES</b></h4>
+                        </div>
+                        <table class="highlight">
+                            <thead>
+                            <tr><th></th></tr>
+                            </thead>
+                        </table>
+                        <table id="table1" class="highlight bordered">
+                            <tbody>
+                            <tr>
+                                <th width="80%">Gallegos Aliaga, José Esteban</th>
+                                <th>20151307B</th>
+                            </tr>
+                            <tr>
+                                <th width="80%">---</th>
+                                <th>---</th>
+                            </tr>
+                            <tr>
+                                <th width="80%">---</th>
+                                <th>---</th>
+                            </tr>
+                            <tr>
+                                <th width="80%">---</th>
+                                <th>---</th>
+                            </tr>
+                            <tr>
+                                <th width="80%">---</th>
+                                <th>---</th>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="introduccion==1">
+        <div class="card">
+            <div class="card-content black-text">
+                <div class="row">
+                    <div class=" row center-align">
+                        <h4><b>INTRODUCCIÓN</b></h4>
+                    </div>
+                    <h5></h5>
+                    <div class="row"></div>
+                    <div class="center-align">
+                        <img  class="materialboxed fotoBackus1"  src="app/img/backus_1.jpg" alt="HTML5 Icon"  style="width:600px;height:300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="historia==1">
+        <div class="card">
+            <div class="card-content black-text">
+                <div class="row">
+                    <div class=" row center-align">
+                        <h4><b>HISTORIA POR PERIODOS</b></h4>
+                    </div>
+                    <h5>El origen de Backus se remonta a 1879, año en el que los señores Jacobo Backus y Howard Johnston,
+                        de nacionalidad estadounidense, establecen una cervecería en el tradicional distrito del Rímac.
+                        Posteriormente, fue adquirida por Backus & Johnston Brewery Company Ltd.,
+                        una empresa fundada en Londres en 1889.
+                    </h5>
+                    <div class="row"></div>
+                    <h5>
+                        <b>1954:</b> Backus & Johnston Brewery Company Ltd. es adquirida por empresarios peruanos. Backus &
+                        Johnston Brewery Company Ltd. fue transformada en una empresa nacional en 1954, cuando sus acciones
+                        fueron adquiridas por inversionistas peruanos, liderados por Don Ricardo Bentín Mujica, quienes
+                        la convierten en la Cervecería Backus & Johnston S.A., estableciendo un ejemplo de nacionalización
+                        por iniciativa privada y accionariado difundido.
+                    </h5>
+                    <div class="row"></div>
+                    <h5>
+                        <b>1955-1973:</b> Ampliación del mercado y descentralización
+                        El mercado se desarrolla significativamente, se moderniza la Planta del Rímac y se adopta como Sistema
+                        de Comercialización a las Centrales de Distribución, llegando a tener el 41% de la participación del
+                        mercado cervecero.
+                        Se descentraliza la fabricación de cerveza y se promueve la constitución de Cervecería San Juan S. A.
+                        y Cervecería del Norte S.A., para atender los mercados de la Amazonía y el norte del país.
+                    </h5>
+                    <div class="row"></div>
+                    <h5><b>1981-1993:</b>	 Inversión	en Planta de Ate
+                        En 1981 se instala la primera línea de embotellamiento en la planta de Ate, queda completamente
+                        equipada en el año 1993 con la instalación de la línea de cocimiento, siendo inaugurada en ese año.
+                        Esta importante inversión permitió contar con la capacidad instalada necesaria para la expansión del
+                        mercado cervecero, convirtiéndose en una de las más modernas de América.
+                    </h5>
+                    <div class="row"></div>
+                    <h5><b>1994:</b> Se adquiere Compañía Nacional de Cerveza S.A.
+                        Backus adquiere el 62% de las acciones comunes de la Compañía Nacional de Cerveza S.A.(CNC), su principal
+                        competidor por más de un siglo. Esto le permite adquirir participaciones en Sociedad Cervecera de Trujillo
+                        S.A., de Agua Mineral Litinada San Mateo S.A., entre otras compañías de propiedad de CNC.
+                    </h5>
+                    <div class="row"></div>
+                    <h5><b>1996:</b>	Fusión	de	empresas.
+                        Con una visión de futuro y buscando maximizar las eficiencias a través de las sinergias
+                        en el negocio cervecero, en 1996 los accionistas de Cervecería Backus y Johnston S.A., Compañía
+                        Nacional de Cerveza S.A., Cervecería del Norte S.A. y Sociedad Cervecera de Trujillo S.A. deciden
+                        fusionar las empresas creando Unión de Cervecerías Peruanas Backus y Johnston S.A.A., la empresa
+                        cervecera más importante  del Perú.
+                    </h5>
+                    <div class="row"></div>
+                    <h5><b>2000:</b> Se adquiere Compañía Cervecera del Sur del Perú S.A.
+                        En el año 2000, Compañía Cervecera del Sur del Perú S.A. (Cervesur) con sus plantas de Arequipa
+                        y Cusco pasa a formar parte del Grupo Backus, con el objetivo de consolidar una compañía capaz
+                        de competir efectivamente en un entorno globalizado.
+                    </h5>
+                    <div class="row"></div>
+                    <h5><b>2005:</b> SABMiller adquiere el Grupo Empresarial Bavaria
+                        Con la fusión del Grupo Empresarial Bavaria y SABMiller plc, empresa de origen sudafricano,
+                        con sede en Londres; pasa a formar parte del segundo grupo cervecero a nivel mundial, con presencia
+                        en más de 60 países y con un portafolio de más de 170 marcas.
+                    </h5>
+                    <div class="row"></div>
+                    <h5><b>2014:</b> Backus cede a Coca Cola sus marcas de bebidas no alcohólicas, Esta transferencia se realizó cuando
+                        SabMiller, la empresa que administra actualmente a Backus, llegó a un acuerdo Global con The Coca Cola Company,
+                        para darles las facilidades de que esta compañía pueda apropiarse de las marcas de sus bebidas no alcohólicas,
+                        tales como San Mateo, Guaraná Backus, Cristalina, etc, con la finalidad de expandirse por el continente africano.</h5>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="center-align">
+                        <img  class="materialboxed fotoBackus1"  src="app/img/backus_1.jpg" alt="HTML5 Icon"  style="width:600px;height:300px;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="actualidad==1">
+        <div class="card">
+            <div class="card-content black-text">
+                <div class="row">
+                    <div class=" row center-align">
+                        <h4><b>EN LA ACTUALIDAD</b></h4>
+                    </div>
+                    <h5>Actualmente Backus es la empresa líder de la industria cervecera en el Perú.
+                        Tenemos 5 plantas de producción de cerveza descentralizadas ubicadas en Lima
+                        (Ate), Arequipa, Cusco, Motupe y Pucallpa; además de una Maltería y una planta
+                        de agua mineral. Contamos con un portafolio de marcas nacionales e internacionales
+                        muy bien segmentadas, que buscan satisfacer a los consumidores en los más de
+                        180,000 puntos de venta a lo largo de todo el país.</h5>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="center-align">
+                        <img  class="materialboxed fotoBackus1"  src="app/img/backus_4.jpg" alt="HTML5 Icon"  style="width:600px;height:300px;">
+                    </div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class=" center-align">
+                    <h5><b>ELABORACIÓN DE LA CERVEZA EN UNA PLANTA DE BACKUS</b></h5>
+                    </div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row">
+                    <div class="col s2"></div>
+                    <div class="col s8">
+                    <div class="video-container">
+
+                        <iframe width="600" height="480" src="https://www.youtube.com/embed/tBqGtyTg_Fo" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+
+                    </div>
+                    </div>
+                        <div class="col s2"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="e_s_f_activos==1">
+    <div class="card">
+        <div class="card-content black-text">
+            <div class="row">
+                <div class=" row center-align">
+                    <h4><b>ESTADO DE SITUACIÓN FINANCIERA(ACTIVOS)- ANÁLISIS VERTICAL</b></h4>
+                </div>
+                <h5></h5>
+                <div class="row"></div>
+                <div class="center-align">
+                    <img  class="materialboxed fotoBackus1"  src="app/img/e_s_f_activos_AV.png" alt="HTML5 Icon"  style="width:800px;height:400px;">
+                </div>
+            </div>
+            <div class="row"></div><div class="row"></div>
+            <div class="row">
+                <div class=" row center-align">
+                    <h4><b>ESTADO DE SITUACIÓN FINANCIERA(ACTIVOS)- ANÁLISIS HORIZONTAL</b></h4>
+                </div>
+                <h5></h5>
+                <div class="row"></div>
+                <div class="center-align">
+                    <img  class="materialboxed fotoBackus1"  src="app/img/e_s_f_activos_AV.png" alt="HTML5 Icon"  style="width:800px;height:400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="e_s_f_pasivos==1">
+    <div class="card">
+        <div class="card-content black-text">
+            <div class="row">
+                <div class=" row center-align">
+                    <h4><b>ESTADO DE SITUACIÓN FINANCIERA(PASIVOS)- ANÁLISIS VERTICAL</b></h4>
+                </div>
+                <h5></h5>
+                <div class="row"></div>
+                <div class="center-align">
+                    <img  class="materialboxed fotoBackus1"  src="app/img/e_s_f_pasivos_AV.png" alt="HTML5 Icon"  style="width:800px;height:400px;">
+                </div>
+            </div>
+            <div class="row"></div><div class="row"></div>
+            <div class="row">
+                <div class=" row center-align">
+                    <h4><b>ESTADO DE SITUACIÓN FINANCIERA(PASIVOS)- ANÁLISIS HORIZONTAL</b></h4>
+                </div>
+                <h5></h5>
+                <div class="row"></div>
+                <div class="center-align">
+                    <img  class="materialboxed fotoBackus1"  src="app/img/e_s_f_pasivos_AV.png" alt="HTML5 Icon"  style="width:800px;height:400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-show="e_s_f_patrimonio==1">
+    <div class="card">
+        <div class="card-content black-text">
+            <div class="row">
+                <div class=" row center-align">
+                    <h4><b>ESTADO DE SITUACIÓN FINANCIERA(PATRIMONIO)- ANÁLISIS VERTICAL</b></h4>
+                </div>
+                <h5></h5>
+                <div class="row"></div>
+                <div class="center-align">
+                    <img  class="materialboxed fotoBackus1"  src="app/img/e_s_f_patrimonio_AV.png" alt="HTML5 Icon"  style="width:800px;height:300px;">
+                </div>
+            </div>
+            <div class="row"></div><div class="row"></div>
+            <div class="row">
+                <div class=" row center-align">
+                    <h4><b>ESTADO DE SITUACIÓN FINANCIERA(PATRIMONIO)- ANÁLISIS HORIZONTAL</b></h4>
+                </div>
+                <h5></h5>
+                <div class="row"></div>
+                <div class="center-align">
+                    <img  class="materialboxed fotoBackus1"  src="app/img/e_s_f_patrimonio_AV.png" alt="HTML5 Icon"  style="width:800px;height:400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<ul id="slide-out" class="side-nav">
+
+    <li><div class="divider"></div></li>
+    <li><a ng-click="EntrarInicio()">INICIO</a></li>
+    <li><div class="divider"></div></li>
+    <li><a ng-click="EntrarIntegrantes()">INTEGRANTES</a></li>
+    <li><div class="divider"></div></li>
+    <li><a ng-click="EntrarIntroduccion()">INTRODUCCIÓN</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">LA EMPRESA</a></li>
+    <li><a ng-click="EntrarHistoria()">HISTORIA</a></li>
+    <li><a ng-click="EntrarActualidad()">EN LA ACTUALIDAD</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader"    >ANÁLISIS DE CUENTAS</a></li>
+    <li><a ng-click="EntrarE_S_F_ACTIVOS()">ESTADOS DE SITUACIÓN FINANCIERA(ACTIVOS)</a></li>
+    <li><a ng-click="EntrarE_S_F_PASIVOS()">ESTADOS DE SITUACIÓN FINANCIERA(PASIVOS)</a></li>
+    <li><a ng-click="EntrarE_S_PATRIMONIO()">ESTADOS DE SITUACIÓN FINANCIERA(PATRIMONIO)</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">RATIOS FINANCIEROS</a></li>
+    <li><a class="waves-effect" href="#!">RATIOS DE POSICIÓN FINANCIERA</a></li>
+    <li><a class="waves-effect" href="#!">RATIOS DE EFICIENCIA OPERATIVA</a></li>
+    <li><a class="waves-effect" href="#!">RATIOS DE RENTABILIDAD</a></li>
+    <li><a class="waves-effect" href="#!">CONCLUSIONES</a></li>
+
+</ul>
